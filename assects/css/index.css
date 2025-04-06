@@ -326,10 +326,10 @@ body {
 }
 
 .home {
-  background-image: url("/assects/images/me2.png");
-  background-size: 340px 90vh;
+  background-image: url("/assects\images\me1.png");
+  background-size: auto 90vh;
   background-position: center right;
-  background-position: calc(100% - 40px) center;
+  background-position: calc(100% + 40px) center;
   background-repeat: no-repeat;
   height: 100vh;
   display: flex;
