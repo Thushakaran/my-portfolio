@@ -326,7 +326,7 @@ body {
 }
 
 .home {
-  background-image: url("/assects/images/me2.png");
+  background-image: url("assects\images\me2.png");
   background-size: 340px 90vh;
   background-position: center right;
   background-position: calc(100% - 40px) center;
