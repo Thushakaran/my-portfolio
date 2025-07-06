@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact - My Portfolio</title>
-    <link rel="stylesheet" href="assects\css\index.css" />
+    <link rel="stylesheet" href="assets/css/index.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -17,26 +17,57 @@
   <body>
     <div class="sidebar">
       <img
-        src="assects\images\me.png"
+        src="assets/images/me.png"
         alt="Thushakaran's Profile Picture"
         class="profile-pic"
       />
+      <br>
       <h2>
         Balasubramaniyam <br />
         Thushakaran
       </h2>
-      <nav>
-        <ul>
-          <li><a href="index.html#home">🏠 Home</a></li>
-          <li><a href="#about">👤 About</a></li>
-          <li><a href="#skills">👤 Skills</a></li>
-          <li><a href="#projects">📂 Projects</a></li>
-          <li><a href="#contact">✉️ Contact</a></li>
-        </ul>
-        <br />
+              <nav class="main-nav">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="index.html#home" class="nav-link">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link">
+                <i class="fas fa-user"></i>
+                <span>About</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#skills" class="nav-link">
+                <i class="fas fa-code"></i>
+                <span>Skills</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#projects" class="nav-link">
+                <i class="fas fa-folder"></i>
+                <span>Projects</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="theme-toggle">
+          <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
         <div class="social-links">
           <a
-            href="https://www.linkedin.com/in/thushakaran-balasubramaniyam-a93188281/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BVizvFUc5QkCQHGPH2v6k1g%3D%3D"
+            href="https://www.linkedin.com/in/thushakaran/"
             target="_blank"
             aria-label="LinkedIn"
           >
@@ -51,34 +82,58 @@
     </div>
 
     <div class="main-content">
-      <!-- Home Section -->
-      <div class="home" id="home">
-        <section id="home" class="section">
-          <h1 class="fade-in animate__animated animate__zoomIn">
-            Balasubramaniyam Thushakaran
-          </h1>
-          
-          
-          <br />
-          <h2>I'm a <span class="typing"></span></h2>
+      <!-- Hero Section -->
+      <div class="hero" id="home">
+        <section class="hero-content">
+          <div class="hero-text">
+            <h1 class="hero-title fade-in animate__animated animate__zoomIn">
+              Hi, I'm <span class="highlight">Balasubramaniyam Thushakaran</span>
+            </h1>
+            <h2 class="hero-subtitle">
+              I'm a <span class="typing"></span>
+            </h2>
+            <p class="hero-description">
+              Passionate Full-Stack Software Engineer with a strong focus on backend development, proficient in Spring Boot and Node.js. I build scalable, user-friendly applications using modern web technologies to solve real-world problems.            </p>
+            <div class="hero-cta">
+              <a href="#projects" class="btn btn-primary">View My Work</a>
+              <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+              <a href="assets/Thushakaran__CV.pdf" class="btn btn-outline" download>
+                <i class="fas fa-download"></i> Download Resume
+              </a>
+            </div>
+            <div class="hero-stats">
+              <div class="stat">
+                <span class="stat-number">4+</span>
+                <span class="stat-label">Projects</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">8+</span>
+                <span class="stat-label">Technologies</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">1+</span>
+                <span class="stat-label">Years Experience</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="assets/images/me.png "alt="Thushakaran's Profile" class="hero-profile" />
+          </div>
         </section>
       </div>
 
       <!-- About Me Section -->
-      <div class="about-me">
-        <section id="about" class="intro fade-in">
+      <div class="about-me animate-on-scroll">
+        <section id="about" class="intro fade-in animate-on-scroll">
           <h1 class="animate__animated animate__backInRight">About Me</h1>
           <p>
-            Hello, I'm Balasubramaniyam Thushakaran! I'm passionate about
-            technology, coding, and design. My journey began with an interest in
-            computers and has evolved into a love for creating functional and
-            beautiful websites. I specialize in back-end development but am
-            always expanding my skills in front-end technologies as well.
+            Hello, I'm Balasubramaniyam Thushakaran – a passionate Full-Stack Software Engineer with a strong interest in technology, coding, and design. My journey began with a curiosity about how computers work and evolved into a deep passion for building scalable, user-focused web applications. <br>
+            I specialize in back-end development, particularly with Spring Boot and Node.js, and I'm also continuously growing my skills in front-end technologies like React to become a well-rounded full-stack developer. I'm driven by the challenge of solving real-world problems through clean, efficient, and modern code.
           </p>
         </section>
 
         <!-- Bio Data Section -->
-        <section id="bio-data" class="fade-in">
+        <section id="bio-data" class="fade-in animate-on-scroll">
           <h2>Bio Data</h2>
           <div class="bio-info">
             <p><strong>Birthday:</strong> 19 January 2002</p>
@@ -87,7 +142,6 @@
               <a href="tel:+94762971306">+94762971306</a>
             </p>
             <p><strong>City:</strong> Jaffna</p>
-            <p><strong>Age:</strong> 23</p>
             <p><strong>Degree:</strong> B.Sc (Hons) in Software Engineering</p>
             <p>
               <strong>Email:</strong>
@@ -97,67 +151,53 @@
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="fade-in">
+        <section id="skills" class="fade-in animate-on-scroll">
           <h1 class="animate__animated animate__backInRight">My Skills</h1>
-          <div class="skills-list">
-            <div class="skill">
-              <h3>HTML & CSS</h3>
-              <p>
-                I build clean, accessible, and responsive websites with HTML5
-                and CSS3.
-              </p>
+
+          <!-- Programming Languages -->
+          <div class="skills-category">
+            <h2>Programming Languages</h2>
+            <div class="skills-list">
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">PHP</span>
+              <span class="skill-tag">C Programming</span>
+              <span class="skill-tag">HTML & CSS</span>
             </div>
-            <div class="skill">
-              <h3>Bootstrap</h3>
-              <p>
-                Creating responsive and visually appealing designs using
-                Bootstrap.
-              </p>
+          </div>
+
+          <!-- Frameworks & Libraries -->
+          <div class="skills-category">
+            <h2>Frameworks & Libraries</h2>
+            <div class="skills-list">
+              <span class="skill-tag">Spring Boot</span>
+              <span class="skill-tag">React.js</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Express.js</span>
+              <span class="skill-tag">Bootstrap</span>
             </div>
-            <div class="skill">
-              <h3>JavaScript</h3>
-              <p>
-                Interactive web pages and dynamic user experiences powered by
-                JavaScript.
-              </p>
+          </div>
+
+          <!-- Databases -->
+          <div class="skills-category">
+            <h2>Databases</h2>
+            <div class="skills-list">
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">MongoDB</span>
             </div>
-            <div class="skill">
-              <h3>C Programming</h3>
-              <p>
-                Writing efficient and optimized programs in C for system-level
-                applications and problem-solving.
-              </p>
-            </div>
-            <div class="skill">
-              <h3>Java</h3>
-              <p>
-                Developing high-performance applications using Java, including
-                backend services and enterprise solutions.
-              </p>
-            </div>
-            <div class="skill">
-              <h3>React</h3>
-              <p>
-                Developing modern, efficient, and scalable web applications
-                using React.
-              </p>
-            </div>
-            <div class="skill">
-              <h3>PHP</h3>
-              <p>
-                Server-side scripting and backend development with PHP for
-                dynamic websites.
-              </p>
-            </div>
-            <div class="skill">
-              <h3>Spring Boot</h3>
-              <p>
-                Building robust and scalable backend services with Spring Boot.
-              </p>
+          </div>
+
+          <!-- Development Tools -->
+          <div class="skills-category">
+            <h2>Development Tools</h2>
+            <div class="skills-list">
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">Postman</span>
+              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">IntelliJ IDEA</span>
             </div>
           </div>
         </section>
-        <br /><br />
 
       <!-- Projects Section -->
       <div class="my-projects">
@@ -165,48 +205,84 @@
           <h1 class="animate__animated animate__backInRight">My Projects</h1>
           <div class="projects-grid">
             <div class="project-card">
-              <img src="assects\images\fuel_quota.png" alt="Project 1" />
-              <h3>Fuel Quota Management System</h3>
-              <p>
-                A web and mobile application for managing fuel distribution
-                using QR codes. Built with Spring Boot, React, and React Native.
-              </p>
-              <a href="https://github.com/Thushakaran/Fuel-Quota-Management-System" class="btn" target="_blank">View Project</a>
+              <div class="project-image">
+                <img src="assets/images/fuel_quota.png" alt="Fuel Quota Management System" />
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a href="https://github.com/Thushakaran/Fuel-Quota-Management-System" target="_blank" class="project-link">
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="project-link" title="Live Demo Coming Soon">
+                      <i class="fas fa-external-link-alt"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-content">
+                <h3>Fuel Quota Management System</h3>
+                <div class="project-tech">
+                  <span class="tech-tag">Spring Boot</span>
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">React Native</span>
+                  <span class="tech-tag">MySQL</span>
+                  <span class="tech-tag">QR Code</span>
+                </div>
+              </div>
             </div>
             <div class="project-card">
-              <img src="assects\images\food_ordering.jpg" alt="Project 2" />
-              <h3>Online Food Ordering System</h3>
-              <p>
-                A React and Spring Boot-based system for ordering food online
-                with secure payments and restaurant management.
-              </p>
-              <a href="https://github.com/Thushakaran/Online-Food-Ordering-System" class="btn" target="_blank">View Project</a>
+              <div class="project-image">
+                <img src="assets/images/food_ordering.jpg" alt="Online Food Ordering System" />
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a href="https://github.com/Thushakaran/Online-Food-Ordering-System" target="_blank" class="project-link">
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="project-link" title="Live Demo Coming Soon">
+                      <i class="fas fa-external-link-alt"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-content">
+                <h3>Online Food Ordering System</h3>
+                <div class="project-tech">
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">Spring Boot</span>
+                  <span class="tech-tag">MySQL</span>
+                  <span class="tech-tag">Bootstrap</span>
+                </div>
+              </div>
             </div>
             <div class="project-card">
-              <img src="assects\images\employee.png" alt="Project 3" />
-              <h3>Employee Management System</h3>
-              <p>
-                A web application to manage employees and departments using
-                React and Spring Boot.
-              </p>
-              <a href="https://github.com/Thushakaran/Employee-Management-System" class="btn" target="_blank">View Project</a>
-            </div>
-            <div class="project-card">
-              <img src="assects\images\blood_donation.png" alt="Project 3" />
-              <h3>Blood Donation System</h3>
-              <p>
-                A PHP-based web app for connecting blood donors and recipients
-                in Sri Lanka.
-              </p>
-              <a href="https://github.com/Thushakaran/blood_donation_project" class="btn" target="_blank">View Project</a>
+              <div class="project-image">
+                <img src="assets/images/blood_donation.png" alt="Blood Donation System" />
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a href="https://github.com/Thushakaran/blood_donation_project" target="_blank" class="project-link">
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="project-link" title="Live Demo Coming Soon">
+                      <i class="fas fa-external-link-alt"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-content">
+                <h3>Blood Donation System</h3>
+                <div class="project-tech">
+                  <span class="tech-tag">PHP</span>
+                  <span class="tech-tag">MySQL</span>
+                  <span class="tech-tag">Bootstrap</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>
       </div>
 
       <!-- Contact Form -->
-      <div class="contact-me">
-        <section id="contact" class="section">
+      <div class="contact-me animate-on-scroll">
+        <section id="contact" class="section animate-on-scroll">
           <h1 class="animate__animated animate__backInRight">Contact Me</h1>
           <p>
             Feel free to reach out via the form below or through social media.
@@ -233,12 +309,17 @@
             <button type="submit" class="btn">Send Message</button>
           </form>
 
+          <div class="contact-details" style="margin-top:18px; margin-bottom:10px;">
+            <div><strong>Email:</strong> <a href="mailto:thushakarant@gmail.com">thushakarant@gmail.com</a></div>
+            <div><strong>Phone:</strong> <a href="tel:+94762971306">+94762971306</a></div>
+          </div>
+
           <div class="social-links">
             <a href="https://github.com/Thushakaran" class="social-icon" target="_blank"
               ><i class="fab fa-github"></i
             ></a>
             <a
-              href="https://www.linkedin.com/in/thushakaran-balasubramaniyam-a93188281/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BVizvFUc5QkCQHGPH2v6k1g%3D%3D"
+              href="https://www.linkedin.com/in/thushakaran/"
               class="social-icon" target="_blank"
               ><i class="fab fa-linkedin"></i
             ></a>
@@ -246,6 +327,6 @@
         </section>
       </div>
     </div>
-    <script src="assects\js\index.js"></script>
+    <script src="assets/js/index.js"></script>
   </body>
 </html>
