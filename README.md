@@ -4,7 +4,7 @@ A personal portfolio website showcasing my skills, projects, and experience as a
 
 ## 🚀 Live Demo
 
-Visit: [https://thushakaran.github.io/my-portfolio](https://thushakaran.github.io/my-portfolio)
+Visit: [https://thushakaran.github.io/](https://thushakaran.github.io/)
 
 ## 🛠️ Technologies Used
 
