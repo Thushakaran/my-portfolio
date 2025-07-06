@@ -1,14 +1,23 @@
 {
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My Portfolio Website",
+  "main": "index.html",
+  "homepage": "https://thushakaran.github.io/my-portfolio",
+  "scripts": {
+    "start": "live-server",
+    "build": "echo 'Static site - no build required'",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d ."
+  },
   "dependencies": {
     "animate.css": "^4.1.1"
   },
-  "homepage": "https://thushakaran.github.io/my-portfolio",
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "gh-pages": "^6.3.0",
+    "live-server": "^1.2.2"
   },
-  "scripts": {
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist"
-}
-
+  "keywords": ["portfolio", "web-development", "full-stack"],
+  "author": "Balasubramaniyam Thushakaran",
+  "license": "MIT"
 }
