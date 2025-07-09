@@ -47,6 +47,12 @@
               </a>
             </li>
             <li class="nav-item">
+              <a href="#education" class="nav-link">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Education</span>
+              </a>
+            </li>
+            <li class="nav-item">
               <a href="#projects" class="nav-link">
                 <i class="fas fa-folder"></i>
                 <span>Projects</span>
@@ -150,51 +156,87 @@
           </div>
         </section>
 
+        <!-- Education Section -->
+        <section id="education" class="fade-in animate-on-scroll">
+          <h1 class="animate__animated animate__backInRight">Education</h1>
+          <div class="education-cards-container">
+            <!-- Degree 1: B.Sc. (Hons) in Software Engineering -->
+            <div class="education-card">
+              <div class="education-card-icon" style="background: linear-gradient(135deg, #b16cea, #ff5e69);">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <div class="education-card-content">
+                <h2>B.Sc. (Hons) in Software Engineering</h2>
+                <div class="education-card-college">University of Kelaniya</div>
+                <div class="education-card-year">Current GPA: 3.38</div>
+              </div>
+            </div>
+            <!-- Degree 2: Diploma in Information Technology -->
+            <div class="education-card">
+              <div class="education-card-icon" style="background: linear-gradient(135deg, #13f1fc, #0470dc);">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <div class="education-card-content">
+                <h2>Diploma in Information Technology</h2>
+                <div class="education-card-college">ESOFT</div>
+              </div>
+            </div>
+            <!-- Degree 3: G.C.E. Advanced Level Examination -->
+            <div class="education-card">
+              <div class="education-card-icon" style="background: linear-gradient(135deg, #f7971e, #ffd200);">
+                <i class="fas fa-book"></i>
+              </div>
+              <div class="education-card-content">
+                <h2>G.C.E. Advanced Level Examination - 2021</h2>
+                <div class="education-card-college">Jaffna College</div>
+                <div class="education-card-year">
+                  Combined Mathematics - A | Physics - B | Chemistry - B
+                </div>
+                <div class="education-card-year">
+                  Z-Score: 1.6422
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      <br><br><br>
         <!-- Skills Section -->
         <section id="skills" class="fade-in animate-on-scroll">
-          <h1 class="animate__animated animate__backInRight">My Skills</h1>
-
-          <!-- Programming Languages -->
-          <div class="skills-category">
-            <h2>Programming Languages</h2>
-            <div class="skills-list">
-              <span class="skill-tag">Java</span>
-              <span class="skill-tag">JavaScript</span>
-              <span class="skill-tag">PHP</span>
-              <span class="skill-tag">C Programming</span>
-              <span class="skill-tag">HTML & CSS</span>
+          <h1 class="animate__animated animate__backInRight">Technical Skills</h1>
+          <div class="skills-cards-container">
+            <!-- Frontend Card -->
+            <div class="skills-card">
+              <div class="skills-card-icon frontend"><i class="fas fa-code"></i></div>
+              <h2>Frontend</h2>
+              <ul class="skills-list-bullets">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Bootstrap</li>
+              </ul>
             </div>
-          </div>
-
-          <!-- Frameworks & Libraries -->
-          <div class="skills-category">
-            <h2>Frameworks & Libraries</h2>
-            <div class="skills-list">
-              <span class="skill-tag">Spring Boot</span>
-              <span class="skill-tag">React.js</span>
-              <span class="skill-tag">Node.js</span>
-              <span class="skill-tag">Express.js</span>
-              <span class="skill-tag">Bootstrap</span>
+            <!-- Backend Card -->
+            <div class="skills-card">
+              <div class="skills-card-icon backend"><i class="fas fa-database"></i></div>
+              <h2>Backend</h2>
+              <ul class="skills-list-bullets">
+                <li>Java</li>
+                <li>Spring Boot</li>
+                <li>SQL</li>
+                <li>MongoDB</li>
+              </ul>
             </div>
-          </div>
-
-          <!-- Databases -->
-          <div class="skills-category">
-            <h2>Databases</h2>
-            <div class="skills-list">
-              <span class="skill-tag">MySQL</span>
-              <span class="skill-tag">MongoDB</span>
-            </div>
-          </div>
-
-          <!-- Development Tools -->
-          <div class="skills-category">
-            <h2>Development Tools</h2>
-            <div class="skills-list">
-              <span class="skill-tag">Git</span>
-              <span class="skill-tag">Postman</span>
-              <span class="skill-tag">VS Code</span>
-              <span class="skill-tag">IntelliJ IDEA</span>
+            <!-- Tools & Cloud Card -->
+            <div class="skills-card">
+              <div class="skills-card-icon tools"><i class="fas fa-cloud"></i></div>
+              <h2>Tools & IDEs</h2>
+              <ul class="skills-list-bullets">
+                <li>GitHub</li>
+                <li>Postman</li>
+                <li>IntelliJ</li>
+                <li>VS Code</li>
+              </ul>
             </div>
           </div>
         </section>
@@ -219,7 +261,7 @@
                 </div>
               </div>
               <div class="project-content">
-                <h3>Fuel Quota Management System</h3>
+                <h3><i class="fas fa-gas-pump" style="margin-right:10px; color:#ff9800;"></i>Fuel Quota Management System</h3>
                 <div class="project-tech">
                   <span class="tech-tag">Spring Boot</span>
                   <span class="tech-tag">React</span>
@@ -245,7 +287,7 @@
                 </div>
               </div>
               <div class="project-content">
-                <h3>MERN E-Commerce Project</h3>
+                <h3><i class="fas fa-shopping-cart" style="margin-right:10px; color:#f7a93c;"></i>MERN E-Commerce Project</h3>
                 <div class="project-tech">
                   <span class="tech-tag">MongoDB</span>
                   <span class="tech-tag">Express</span>
@@ -270,7 +312,7 @@
                 </div>
               </div>
               <div class="project-content">
-                <h3>Online Food Ordering System</h3>
+                <h3><i class="fas fa-utensils" style="margin-right:10px; color:#f4d212;"></i>Online Food Ordering System</h3>
                 <div class="project-tech">
                   <span class="tech-tag">React</span>
                   <span class="tech-tag">Spring Boot</span>
@@ -295,7 +337,7 @@
                 </div>
               </div>
               <div class="project-content">
-                <h3>Blood Donation System</h3>
+                <h3><i class="fas fa-tint" style="margin-right:10px; color:#d30707;"></i>Blood Donation System</h3>
                 <div class="project-tech">
                   <span class="tech-tag">PHP</span>
                   <span class="tech-tag">JavaScript</span>

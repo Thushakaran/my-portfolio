@@ -1403,3 +1403,166 @@ html {
     align-items: flex-start;
   }
 }
+
+/* === Skills Cards Section (Custom) === */
+.skills-cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  margin: 40px 0 0 0;
+  flex-wrap: wrap;
+}
+.skills-card {
+  background: var(--bg-card);
+  border: 2px solid var(--accent-primary);
+  border-radius: 18px;
+  box-shadow: 0 2px 12px var(--shadow-color);
+  padding: 40px 32px 32px 32px;
+  min-width: 280px;
+  max-width: 340px;
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s, border 0.3s, transform 0.3s;
+  position: relative;
+}
+.skills-card:hover {
+  box-shadow: 0 8px 32px var(--shadow-color);
+  border-color: var(--accent-secondary);
+  transform: translateY(-6px) scale(1.03);
+  z-index: 2;
+}
+.skills-card-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(
+    135deg,
+    var(--accent-primary),
+    var(--accent-secondary)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 24px;
+  border-radius: 12px; /* Square with rounded corners */
+}
+.skills-card h2 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+.skills-list-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.skills-list-bullets li {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 14px;
+  position: relative;
+  padding-left: 22px;
+}
+.skills-list-bullets li::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: var(--accent-primary);
+  border-radius: 50%;
+  margin-right: 10px;
+  position: absolute;
+  left: 0;
+  top: 7px;
+}
+@media (max-width: 900px) {
+  .skills-cards-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+  }
+  .skills-card {
+    max-width: 400px;
+    width: 100%;
+  }
+}
+
+/* === Education Cards Section (Custom) === */
+.education-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 40px 0 0 0;
+  align-items: center;
+}
+.education-card {
+  display: flex;
+  align-items: center;
+  background: var(--bg-card);
+  border: 1.5px solid var(--accent-primary);
+  border-radius: 24px;
+  box-shadow: 0 2px 16px var(--shadow-color);
+  padding: 36px 48px;
+  min-width: 320px;
+  max-width: 900px;
+  width: 100%;
+  transition: box-shadow 0.3s, border 0.3s, transform 0.3s;
+  margin-bottom: 0;
+}
+.education-card:hover {
+  box-shadow: 0 8px 32px var(--shadow-color);
+  border-color: var(--accent-secondary);
+  transform: translateY(-6px) scale(1.02);
+  z-index: 2;
+}
+.education-card-icon {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.3rem;
+  color: #fff;
+  border-radius: 50%;
+  margin-right: 32px;
+  flex-shrink: 0;
+}
+.education-card-content h2 {
+  font-size: 1.45rem;
+  color: var(--text-primary);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.education-card-college {
+  color: var(--text-secondary);
+  font-size: 1.08rem;
+  margin-bottom: 6px;
+}
+.education-card-year {
+  color: var(--text-muted);
+  font-size: 1.02rem;
+}
+@media (max-width: 700px) {
+  .education-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px 16px;
+    max-width: 98vw;
+  }
+  .education-card-icon {
+    margin-right: 0;
+    margin-bottom: 18px;
+  }
+  .education-card-content h2 {
+    font-size: 1.1rem;
+  }
+}
