@@ -8,12 +8,6 @@ const Contact = () => {
     threshold: 0.1,
   });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted");
-  };
-
   return (
     <section id="contact" className="section">
       <motion.div
@@ -34,7 +28,8 @@ const Contact = () => {
             initial={{ opacity: 0, x: -30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            onSubmit={handleSubmit}
+            action="https://formspree.io/f/mldjparr"
+            method="POST"
           >
             <div className="form-group">
               <input
@@ -45,6 +40,7 @@ const Contact = () => {
                 required
               />
             </div>
+            <input type="hidden" name="_next" value={window.location.href} />
             <div className="form-group">
               <input
                 type="email"
