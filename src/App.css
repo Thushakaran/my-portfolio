@@ -236,10 +236,12 @@ body {
     transition: transform 0.3s ease;
     width: 280px;
     touch-action: pan-y;
+    visibility: hidden;
   }
 
   .sidebar.sidebar-open {
     transform: translateX(0);
+    visibility: visible;
   }
 }
 

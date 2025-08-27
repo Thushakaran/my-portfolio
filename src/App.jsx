@@ -46,6 +46,11 @@ function App() {
       const scrollPercent = (scrollTop / docHeight) * 100;
       setScrollProgress(scrollPercent);
 
+      // Close mobile menu when scrolling
+      if (isMobileMenuOpen) {
+        setIsMobileMenuOpen(false);
+      }
+
       // Update active section based on scroll position
       const sections = [
         "home",
@@ -70,7 +75,7 @@ function App() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isMobileMenuOpen]);
 
   const navItems = [
     { id: "home", label: "Home", icon: FiHome },
@@ -88,6 +93,22 @@ function App() {
     }
     setIsMobileMenuOpen(false);
   };
+
+  // Close sidebar when clicking outside
+  const handleOutsideClick = (e) => {
+    if (isMobileMenuOpen && !e.target.closest('.sidebar') && !e.target.closest('.mobile-menu-btn')) {
+      setIsMobileMenuOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.addEventListener('click', handleOutsideClick);
+    }
+    return () => {
+      document.removeEventListener('click', handleOutsideClick);
+    };
+  }, [isMobileMenuOpen]);
 
   // Floating particles animation
   const particles = Array.from({ length: 20 }, (_, i) => ({
@@ -184,7 +205,7 @@ function App() {
       <motion.aside
         className={`sidebar ${isMobileMenuOpen ? "sidebar-open" : ""}`}
         initial={{ x: -280 }}
-        animate={{ x: 0 }}
+        animate={{ x: isMobileMenuOpen ? 0 : -280 }}
         transition={{ type: "spring", stiffness: 100, damping: 20 }}
       >
         <motion.div
