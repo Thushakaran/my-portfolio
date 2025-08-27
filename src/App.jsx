@@ -25,6 +25,7 @@ function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [activeSection, setActiveSection] = useState("home");
+  const [isMobile, setIsMobile] = useState(false);
 
   // Handle body scroll when sidebar is open
   useEffect(() => {
@@ -109,6 +110,17 @@ function App() {
       document.removeEventListener('click', handleOutsideClick);
     };
   }, [isMobileMenuOpen]);
+
+  // Check screen size
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
 
   // Floating particles animation
   const particles = Array.from({ length: 20 }, (_, i) => ({
@@ -204,8 +216,8 @@ function App() {
       {/* Sidebar */}
       <motion.aside
         className={`sidebar ${isMobileMenuOpen ? "sidebar-open" : ""}`}
-        initial={{ x: -280 }}
-        animate={{ x: isMobileMenuOpen ? 0 : -280 }}
+        initial={{ x: isMobile ? -280 : 0 }}
+        animate={{ x: isMobile ? (isMobileMenuOpen ? 0 : -280) : 0 }}
         transition={{ type: "spring", stiffness: 100, damping: 20 }}
       >
         <motion.div
